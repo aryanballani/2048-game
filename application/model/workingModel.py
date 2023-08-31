@@ -16,7 +16,7 @@ def startGame():
     return Board, False
 
 
-def checkState(board, gameEnd):
+def checkState(board):
     zeroCount = 0
     gameLost = True
     for i in range(constant.GridSize):
