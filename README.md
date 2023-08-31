@@ -1,9 +1,9 @@
 # 2048-game
 ### What is the Game?
-Abstract version, the board could be made for n tiles wide and n tiles long.
-The probability of giving out *twos* after each move can be changed
-### Motivation
-
+2048 is a single-player sliding block puzzle game designed by Italian web developer Gabriele Cirulli. The game's objective is to slide numbered tiles on a grid to combine them to create a tile with the number 2048.
+## Additional Features
+- The board could be made for N x N, by changing the number in '\application\model\constant'
+- The probability of giving out *twos* after each move can be changed by changing the number in '\application\model\constant'
 
 ## How to Play
 
