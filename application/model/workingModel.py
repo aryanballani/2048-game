@@ -11,7 +11,7 @@ def startGame():
     #                   [2,0,2,0]])
     firstTwoPosition = random.randint(0,pow(constant.GridSize, 2)-1)             #randomly generated position for the first 2
     Board[firstTwoPosition//4, firstTwoPosition%4] = 2
-    print("The commands are as follows:\nSwipe Up : Press w/W\nSwipe Down : Press s/S\nSwipe Left : Press a/A\nSwipe Right : Press d/D")
+    print("The commands are as follows:\nSwipe Up : Press 'w' or 'W'\nSwipe Down : Press 's' or 'S'\nSwipe Left : Press 'a' or 'A'\nSwipe Right : Press 'd' or 'D'")
     print("Starting Game...")
     return Board, False
 
