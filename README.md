@@ -18,13 +18,13 @@ The set of instructions you nedd to play the game are as follows:
 If the swipe is valid, i.e., the state of the Board changes, all the tiles on the Board will move in the direction of the swipe and merge if they are slide towards the same numbered tile.
 
 Eg.-
-
- >`Board = ` $\begin{bmatrix}16&8&4&2\\4&8&2&0\\0&0&0&0\\0&0&0&0\end{bmatrix}$ ----Swipe Left----> $\begin{bmatrix}16&8&4&2\\4&8&2&0\\0&0&0&0\\0&0&0&0\end{bmatrix}$
-
+```math
+ Board =  \begin{bmatrix}16&8&4&2\\4&8&2&0\\0&0&0&0\\0&0&0&0\end{bmatrix} ----Swipe Left----> \begin{bmatrix}16&8&4&2\\4&8&2&0\\0&0&0&0\\0&0&0&0\end{bmatrix}
+```
 Here left swipe is redundant, since the state of the board remains the same and nothing moves and/or merges, but if :
-
->`Board = ` $\begin{bmatrix}16&8&4&2\\4&8&2&0\\0&0&0&0\\0&0&0&0\end{bmatrix}$ ----Swipe Up----> $\begin{bmatrix}16&16&4&2\\4&0&2&0\\0&0&0&0\\0&0&2&0\end{bmatrix}$
-
+```math
+Board =  \begin{bmatrix}16&8&4&2\\4&8&2&0\\0&0&0&0\\0&0&0&0\end{bmatrix} ----Swipe Up----> \begin{bmatrix}16&16&4&2\\4&0&2&0\\0&0&0&0\\0&0&2&0\end{bmatrix}
+```
 Here the `8` in `(1,2)` and `(2,2)` merge to become a `16`, and a new tile is generated at a random empty position.
 
                     
