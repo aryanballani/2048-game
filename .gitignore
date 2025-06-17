@@ -151,5 +151,23 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+src/web2048/node_modules
+src/web2048/.pnp
+src/web2048/.pnp.js
 
-src/model/working_model.py
+# testing
+src/web2048/coverage
+
+# production
+src/web2048/build
+
+# misc
+src/web2048/.DS_Store
+src/web2048/.env.local
+src/web2048/.env.development.local
+src/web2048/.env.test.local
+src/web2048/.env.production.local
+
+src/web2048/npm-debug.log*
+src/web2048/yarn-debug.log*
+src/web2048/yarn-error.log*
