@@ -9,6 +9,7 @@ class Game2048:
         self.board = Board2048(self.grid_size)
         self.tile_generator = TileGenerator(self.prob_two)
         self.game_over = False
+        self.won = False
         self.start_game()
 
     def start_game(self):
@@ -16,18 +17,24 @@ class Game2048:
         first_pos = self.tile_generator.get_random_empty_position(self.board.get_board())
         self.board.add_tile(first_pos, 2)
         self.game_over = False
+        self.won = False  # Reset won flag
 
     def check_state(self):
         board_arr = self.board.get_board()
-        if (board_arr == 2048).any():
-            print("You have WON")
-            self.game_over = True
+        if (board_arr == constant.WIN_VALUE).any():
+            print(constant.WIN_MESSAGE)
+            self.won = True
+            self.game_over = False  # Don't set game_over on win
             return True
         if self.board.count_zeroes() == 0 and self.board.no_moves_left():
-            print("You have LOST")
+            print(constant.LOSE_MESSAGE)
             self.game_over = True
+            self.won = False
             return True
         return False
+    
+    def check_won(self):
+        return self.won
 
     def add_block(self):
         if self.board.count_zeroes() == 0:
