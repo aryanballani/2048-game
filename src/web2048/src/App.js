@@ -1,4 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
+import GameBoard from "./GameBoard";
+import Instructions from "./Instructions";
+import StatusMessage from "./StatusMessage";
 
 const API_URL = "http://127.0.0.1:8000";
 
@@ -64,42 +67,12 @@ function App() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleMove]);
 
-  const renderBoard = () => (
-    Array.isArray(board) && board.length > 0 ? (
-      <table style={{ margin: "0 auto" }}>
-        <tbody>
-          {board.map((row, i) => (
-            <tr key={i}>
-              {row.map((cell, j) => (
-                <td key={j} style={{ width: 50, height: 50, textAlign: "center", border: "1px solid #ccc", fontSize: 24 }}>
-                  {cell !== 0 ? cell : ""}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    ) : (
-      <p>Loading board...</p>
-    )
-  );
-
   return (
     <div style={{ textAlign: "center" }}>
       <h1>2048 Game</h1>
-      <div style={{ maxWidth: 400, margin: "0 auto 20px auto", background: "#f9f9f9", padding: 16, borderRadius: 8 }}>
-        <h2>How to Play</h2>
-        <ul style={{ textAlign: "left" }}>
-          <li>Use <b>Arrow keys</b> or <b>WASD</b> keys to move the tiles.</li>
-          <li>When two tiles with the same number touch, they merge into one!</li>
-          <li>Try to reach the <b>2048</b> tile.</li>
-          <li>The game ends when no more moves are possible.</li>
-        </ul>
-      </div>
-      {renderBoard()}
-      {gameWon && <h2>Congratulations! You have finished the game! <br /> 
-                  You can keep going or refresh the page to start a new game.</h2>}
-      {gameOver && <h2>Game Over!</h2>}
+      <Instructions />
+      <GameBoard board={board} />
+      <StatusMessage gameWon={gameWon} gameOver={gameOver} />
     </div>
   );
 }

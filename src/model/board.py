@@ -38,8 +38,7 @@ class Board2048:
     def move_down(self):
         self.board = np.fliplr(self.board.T)
         moved = self.move_left()
-        self.board = self.board.T
-        self.board = np.fliplr(self.board)
+        self.board = np.fliplr(self.board).T
         return moved
 
     def _merge_row(self, row):
