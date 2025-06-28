@@ -4,7 +4,7 @@ import Instructions from "./components/Instructions";
 import StatusMessage from "./components/StatusMessage";
 import "./style/App.css";
 
-const API_URL = process.env.REACT_APP_MODEL_2048_API_URL || "https://two048-game-backend-6fz6.onrender.com";
+const API_URL = process.env.REACT_APP_MODEL_2048_API_URL ||"https://two048-game-backend-6fz6.onrender.com";
 
 const KEY_TO_DIRECTION = {
   ArrowUp: "up",
@@ -29,7 +29,9 @@ function App() {
   // Start a new game on mount
   useEffect(() => {
     fetch(`${API_URL}/start`, { method: "POST" })
-      .then(res => res.json())
+      .then(res => {
+        return res.json();
+      })
       .then(data => {
         setBoard(data.board);
         setGameOver(data.game_over);
