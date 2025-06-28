@@ -2,7 +2,7 @@ import "../style/GameBoard.css";
 
 function GameBoard({ board }) {
   if (!Array.isArray(board) || board.length === 0) {
-    return <p>Loading board...</p>;
+    return <p>Loading board...The backend is hosted on Render free tier😅, Hence the cold start.</p>;
   }
   return (
     <table className="game-board-table">
