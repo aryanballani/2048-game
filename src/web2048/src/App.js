@@ -3,7 +3,9 @@ import GameBoard from "./components/GameBoard";
 import Instructions from "./components/Instructions";
 import StatusMessage from "./components/StatusMessage";
 import "./style/App.css";
-const API_URL = "http://127.0.0.1:8000";
+require('dotenv').config();
+
+const API_URL = process.env.MODEL_2048_API_URL || "http://localhost:5000/api";
 
 const KEY_TO_DIRECTION = {
   ArrowUp: "up",
