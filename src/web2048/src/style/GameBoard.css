@@ -1,0 +1,24 @@
+.game-board-table {
+    margin: 0 auto;
+    background: transparent; /* Remove yellow background from table */
+    border-radius: 14px;
+    box-shadow: none; /* Remove table shadow */
+    border-collapse: separate;
+    border-spacing: 6px; /* Slightly reduce spacing */
+    padding: 0;
+}
+
+.game-board-table td {
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 8px;
+    background: #fffbe6;
+    border: 1.5px solid #ffe066;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #b59f3b;
+    transition: background 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}

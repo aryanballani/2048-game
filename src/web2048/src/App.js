@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from "react";
-import GameBoard from "./GameBoard";
-import Instructions from "./Instructions";
-import StatusMessage from "./StatusMessage";
-
+import GameBoard from "./components/GameBoard";
+import Instructions from "./components/Instructions";
+import StatusMessage from "./components/StatusMessage";
+import "./style/App.css";
 const API_URL = "http://127.0.0.1:8000";
 
 const KEY_TO_DIRECTION = {

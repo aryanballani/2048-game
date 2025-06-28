@@ -1,0 +1,20 @@
+.status-message {
+    max-width: 420px;
+    margin: 18px auto 0 auto;
+    background: rgba(255, 241, 150, 0.92); /* transparent yellowish */
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    border: 1.5px solid #ffe066;
+    text-align: center;
+}
+
+.status-message h2 {
+    color: #b59f3b;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}

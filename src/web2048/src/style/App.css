@@ -1,3 +1,10 @@
+body {
+  background: linear-gradient(135deg, #fffbe6 0%, #fff9db 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +33,17 @@
 
 .App-link {
   color: #61dafb;
+}
+
+h1 {
+  color: #b59f3b;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 8px rgba(255, 241, 150, 0.25);
 }
 
 @keyframes App-logo-spin {
