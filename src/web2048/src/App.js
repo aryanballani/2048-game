@@ -26,6 +26,9 @@ function App() {
   const [gameOver, setGameOver] = useState(false);
   const [gameWon, setGameWon] = useState(false);
 
+  // For swipe detection
+  const [touchStart, setTouchStart] = useState({ x: null, y: null });
+
   // Start a new game on mount
   useEffect(() => {
     fetch(`${API_URL}/start`, { method: "POST" })
@@ -69,6 +72,48 @@ function App() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleMove]);
+
+  // Swipe event listeners
+  useEffect(() => {
+    const handleTouchStart = (e) => {
+      if (e.touches.length === 1) {
+        setTouchStart({
+          x: e.touches[0].clientX,
+          y: e.touches[0].clientY,
+        });
+      }
+    };
+
+    const handleTouchEnd = (e) => {
+      if (touchStart.x === null || touchStart.y === null) return;
+      const touch = e.changedTouches[0];
+      const dx = touch.clientX - touchStart.x;
+      const dy = touch.clientY - touchStart.y;
+      const absDx = Math.abs(dx);
+      const absDy = Math.abs(dy);
+
+      let direction = null;
+      if (Math.max(absDx, absDy) > 30) { // Minimum swipe distance
+        if (absDx > absDy) {
+          direction = dx > 0 ? "right" : "left";
+        } else {
+          direction = dy > 0 ? "down" : "up";
+        }
+      }
+      if (direction) {
+        handleMove(direction);
+      }
+      setTouchStart({ x: null, y: null });
+    };
+
+    window.addEventListener("touchstart", handleTouchStart, { passive: false });
+    window.addEventListener("touchend", handleTouchEnd, { passive: false });
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [touchStart, handleMove]);
 
   return (
     <div style={{ textAlign: "center" }}>

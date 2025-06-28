@@ -6,7 +6,7 @@ function Instructions() {
             <h2 className="instructions-title">How to Play</h2>
             <ul className="instructions-list">
                 <li>
-                    Use <b>Arrow keys</b> or <b>ASWD</b> keys to move the tiles.
+                    Use <b>Arrow keys</b> or <b>ASWD</b> keys to move the tiles. (Swipe on mobile)
                 </li>
                 <li>
                     When two tiles with the same number touch, they merge into one!
