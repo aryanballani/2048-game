@@ -5,7 +5,7 @@ import StatusMessage from "./components/StatusMessage";
 import "./style/App.css";
 require('dotenv').config();
 
-const API_URL = process.env.MODEL_2048_API_URL || "http://localhost:5000/api";
+const API_URL = process.env.MODEL_2048_API_URL || "https://two048-game-backend-6fz6.onrender.com";
 
 const KEY_TO_DIRECTION = {
   ArrowUp: "up",

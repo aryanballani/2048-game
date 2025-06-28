@@ -1,6 +1,6 @@
-import src.model.constant as constant
-from src.model.board import Board2048
-from src.model.tile_generator import TileGenerator
+import constant as constant
+from board import Board2048
+from tile_generator import TileGenerator
 
 class Game2048:
     def __init__(self, grid_size=None, prob_two=None):

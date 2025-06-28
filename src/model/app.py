@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Body
-from src.model.game import Game2048
+from game import Game2048
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
