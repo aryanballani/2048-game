@@ -1,0 +1,20 @@
+:root {
+  --color-bg-gradient-start: #fffbe6;
+  --color-bg-gradient-end: #fff9db;
+  --color-board-bg: transparent;
+  --color-board-border: #ffe066;
+  --color-board-cell-bg: #fffbe6;
+  --color-board-cell-border: #ffe066;
+  --color-board-cell-text: #b59f3b;
+  --color-status-bg: rgba(255, 241, 150, 0.92);
+  --color-status-border: #ffe066;
+  --color-status-text: #b59f3b;
+  --color-instructions-bg: rgba(255, 241, 150, 0.85);
+  --color-instructions-border: #ffe066;
+  --color-instructions-title: #b59f3b;
+  --color-instructions-list: #7c6f3c;
+  --color-header: #b59f3b;
+  --color-header-shadow: rgba(255, 241, 150, 0.25);
+  --color-app-header-bg: #282c34;
+  --color-app-link: #61dafb;
+}

@@ -1,10 +1,12 @@
+@import './colors.css';
+
 .game-board-table {
     margin: 0 auto;
-    background: transparent; /* Remove yellow background from table */
+    background: var(--color-board-bg);
     border-radius: 14px;
-    box-shadow: none; /* Remove table shadow */
+    box-shadow: none;
     border-collapse: separate;
-    border-spacing: 6px; /* Slightly reduce spacing */
+    border-spacing: 6px;
     padding: 0;
 }
 
@@ -14,11 +16,11 @@
     text-align: center;
     vertical-align: middle;
     border-radius: 8px;
-    background: #fffbe6;
-    border: 1.5px solid #ffe066;
+    background: var(--color-board-cell-bg);
+    border: 1.5px solid var(--color-board-cell-border);
     font-size: 1.4rem;
     font-weight: 700;
-    color: #b59f3b;
+    color: var(--color-board-cell-text);
     transition: background 0.2s;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
